@@ -25,7 +25,8 @@ cd /opt/log_analyzer/reference-apps/logs_analyzer/app/java8
 sudo /opt/maven/bin/mvn package
 
 # Use the log analyzer
-/home/tmonte/spark-2.2.0-bin-hadoop2.7/bin/spark-submit \
+cd /home/tmonte/spark-2.2.0-bin-hadoop2.7/bin/
+sudo /home/tmonte/spark-2.2.0-bin-hadoop2.7/bin/spark-submit \
    --class "com.databricks.apps.logs.LogAnalyzerAppMain" \
    --master spark://192.168.1.25:4040 \
    target/uber-log-analyzer-2.0.jar \
@@ -33,4 +34,4 @@ sudo /opt/maven/bin/mvn package
    --output-html-file /tmp/log_stats.html \
    --window-length 30 \
    --slide-interval 5 \
-   --checkpoint-directory /tmp/log-analyzer-streaming
+   --checkpoint-directory /tmp
