@@ -26,9 +26,6 @@ sudo /opt/maven/bin/mvn package
 # Reboot
 sudo reboot
 
-# start apache spark
-sudo /opt/spark/sbin/start-master.sh &
-
 # Use the log analyzer
 cd /opt/spark/
 sudo /opt/spark/bin/spark-submit \
