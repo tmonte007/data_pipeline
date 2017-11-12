@@ -22,14 +22,14 @@ sudo mkdir /opt/log_analyzer
 cd /opt/log_analyzer
 sudo git clone https://github.com/databricks/reference-apps.git
 cd /opt/log_analyzer/reference-apps/logs_analyzer/app/java8
-mvn package
+sudo /opt/maven/bin/mvn package
 
 # Use the log analyzer
 /home/tmonte/spark-2.2.0-bin-hadoop2.7/bin/spark-submit \
    --class "com.databricks.apps.logs.LogAnalyzerAppMain" \
    --master spark://192.168.1.25:4040 \
    target/uber-log-analyzer-2.0.jar \
-   --logs-directory /tmp/logs \
+   --logs-directory /opt/access_log/ \
    --output-html-file /tmp/log_stats.html \
    --window-length 30 \
    --slide-interval 5 \
