@@ -40,8 +40,3 @@ sudo /opt/spark/bin/spark-submit \
    --window-length 30 \
    --slide-interval 5 \
    --checkpoint-directory /tmp
-   
-      /opt/log_analyzer/reference-apps/logs_analyzer/app/java8/target/log-analyzer-2.0-shaded.jar
-      
-      Cannot assign requested address: Service 'sparkDriver' failed after 16 retries (on a random free port)! Consider explicitly setting the appropriate binding address for the service 'sparkDriver' (for example spark.driver.bindAddress for SparkDriver) to the correct binding address.
-
