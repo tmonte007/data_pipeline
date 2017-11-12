@@ -19,6 +19,7 @@ http://www.datumly.com/2017/08/apache-spark-2-2-in-a-virtual-machine-simple-gett
 https://www.vultr.com/docs/how-to-install-apache-maven-on-ubuntu-16-04<br />
 https://medium.com/@josemarcialportilla/installing-scala-and-spark-on-ubuntu-5665ee4b62b1<br />
 https://spark.apache.org/docs/latest/spark-standalone.html#installing-spark-standalone-to-a-cluster<br />
+https://github.com/franzwong/til/blob/master/java/silent-install-oracle-jdk8-ubuntu.md<br />
 
 ## Usage
 Apache Spark 2.2 and scala's sbt build tool do not appear to be compatible.<br />
