@@ -3,7 +3,7 @@
 sudo hostnamectl set-hostname sparkmaster
 
 # start apache spark
-/home/tmonte/spark-2.2.0-bin-hadoop2.7/sbin/start-master.sh &
+sudo /opt/spark/sbin/start-master.sh &
 
 # maven install
 cd /opt/
@@ -25,8 +25,8 @@ cd /opt/log_analyzer/reference-apps/logs_analyzer/app/java8
 sudo /opt/maven/bin/mvn package
 
 # Use the log analyzer
-cd /home/tmonte/spark-2.2.0-bin-hadoop2.7/bin/
-sudo /home/tmonte/spark-2.2.0-bin-hadoop2.7/bin/spark-submit \
+cd /opt/spark/
+sudo /opt/spark/bin/spark-submit \
    --class "com.databricks.apps.logs.LogAnalyzerAppMain" \
    --master spark://192.168.1.25:4040 \
    target/uber-log-analyzer-2.0.jar \
