@@ -2,6 +2,7 @@
 
 # Name the host
 sudo hostnamectl set-hostname sparkmaster
+sudo tee -a /etc/hosts <<<'192.168.1.25  sparkmaster'
 
 # maven install
 cd /opt/
@@ -22,8 +23,10 @@ sudo git clone https://github.com/databricks/reference-apps.git
 cd /opt/log_analyzer/reference-apps/logs_analyzer/app/java8
 sudo /opt/maven/bin/mvn package
 
+# Reboot
+sudo reboot
+
 # start apache spark
-sudo tee -a /etc/hosts <<<'192.168.1.25  sparkmaster'
 sudo /opt/spark/sbin/start-master.sh &
 
 # Use the log analyzer
