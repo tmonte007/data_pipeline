@@ -31,6 +31,10 @@ The java installation you have is not up to date<br />
 requires at least version 1.6+, you have<br />
 version 1.8<br />
 
+You will get error messages with uber-log-analyzer-2.0.jar.  The install replaces the jar, but installs it anyway and the uber file appears to be the one that works.<br />
+[INFO] Replacing /opt/log_analyzer/reference-apps/logs_analyzer/app/java8/target/uber-log-analyzer-2.0.jar with<br /> /opt/log_analyzer/reference-apps/logs_analyzer/app/java8/target/log-analyzer-2.0-shaded.jar<br />
+
+
 I might use scala or python. I am not sure yet.<br />
 sudo apt-get install python<br />
 sudo pip install pyspark<br />
